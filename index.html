@@ -4,167 +4,152 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Client-Centric IT Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fa;
+      color: #333;
     }
+
     header {
-      background-color: #1e1e2f;
+      background: linear-gradient(135deg, #283e51, #485563);
       color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 2rem 1rem;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
     }
+
     header p {
-      margin: 10px 0 0;
-      font-size: 1.1em;
-      color: #cccccc;
+      font-size: 1.1rem;
     }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px;
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
-    .section {
-      margin-bottom: 50px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
-    .section h2 {
-      font-size: 2em;
-      color: #1e1e2f;
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
-    ul.services {
-      list-style: none;
-      padding: 0;
+
+    .service-box {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
-    ul.services li {
+
+    .service-box h3 {
+      margin-top: 0;
+      color: #0056b3;
+    }
+
+    .service-box p {
+      font-size: 0.95rem;
+    }
+
+    .contact-form {
       background: #ffffff;
-      padding: 15px 20px;
-      margin: 15px 0;
-      border-left: 5px solid #0077cc;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    form {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
     }
-    .form-group {
-      margin-bottom: 20px;
-    }
+
     input, textarea {
-      width: 100%;
-      padding: 12px;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      font-size: 1rem;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
     }
+
     button {
-      background-color: #0077cc;
+      background: #0056b3;
       color: white;
+      padding: 0.8rem;
+      font-size: 1rem;
       border: none;
-      padding: 12px 20px;
-      font-size: 1em;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
     }
+
     button:hover {
-      background-color: #005fa3;
+      background: #004099;
     }
+
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .action-buttons a {
+      background: #28a745;
+      padding: 1rem 1.5rem;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .action-buttons a:nth-child(2) {
+      background: #ffc107;
+      color: #000;
+    }
+
     iframe {
       width: 100%;
       border: none;
+      height: 400px;
+      margin-top: 1rem;
       border-radius: 8px;
-      height: 350px;
-      margin-top: 10px;
     }
-    .btn-group {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    .whatsapp-btn, .pay-btn {
-      flex: 1;
-      padding: 15px;
-      background-color: #25d366;
-      color: white;
-      border: none;
-      font-size: 1em;
-      border-radius: 4px;
-      text-align: center;
-      text-decoration: none;
-    }
-    .pay-btn {
-      background-color: #ff6600;
-    }
+
     footer {
-      background-color: #1e1e2f;
+      background: #283e51;
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 50px;
+      padding: 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Client-Centric IT Solutions</h1>
-  <p>Remote Support • Hardware • Advisory • Managed IT Services</p>
-</header>
+  <header>
+    <h1>Client-Centric IT Solutions</h1>
+    <p>Remote IT Support • Advisory • Hardware & Software Help</p>
+  </header>
 
-<div class="container">
-  <section class="section">
-    <h2>Our Services & Pricing</h2>
-    <ul class="services">
-      <li><span>Remote Troubleshooting</span> <strong>R400/hr</strong></li>
-      <li><span>Email & Office 365 Support</span> <strong>R350/user</strong></li>
-      <li><span>Network Setup & Optimization</span> <strong>R1500/site</strong></li>
-      <li><span>Firewall & Antivirus Installation</span> <strong>R700/device</strong></li>
-      <li><span>Small Business IT Consulting</span> <strong>R950/session</strong></li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>Book a Session</h2>
-    <iframe src="https://calendly.com/" title="Book an appointment"></iframe>
-  </section>
-
-  <section class="section">
-    <h2>Find Us</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." title="Google Maps Location" allowfullscreen></iframe>
-  </section>
-
-  <section class="section">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/your_form_id" method="POST">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Full Name" required />
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Remote & On-site Troubleshooting</h3>
+        <p>Fast support for software issues, printer problems, or general IT problems—wherever you are.</p>
+        <p><strong>Price:</strong> R450/hour</p>
       </div>
-      <div class="form-group">
-        <input type="email" name="_replyto" placeholder="Email Address" required />
-      </div>
-      <div class="form-group">
-        <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
-      </div>
-      <button type="submit">Send Message</button>
-    </form>
-
-    <div class="btn-group">
-      <a class="whatsapp-btn" href="https://wa.me/27603640096" target="_blank">Chat on WhatsApp</a>
-      <a class="pay-btn" href="#" target="_blank">Make Payment</a>
-    </div>
-  </section>
-</div>
-
-<footer>
-  <p>clientcentricitsolutions@qualityservice.com</p>
-  <p>&copy; 2025 Client-Centric IT Solutions</p>
-</footer>
-
-</body>
-</html>
+      <div class="service-box">
+        <h3>Email & Office 365 Support</h3>
+        <p>We configure, migrate and support Offic
