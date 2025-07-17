@@ -1,167 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Client-Centric IT Solutions</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #f4f4f9;
-        color: #333;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client-Centric IT Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #111827;
+    }
+    header {
+      background-color: #0284c7;
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .service-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: scale(1.03);
+    }
+    .service-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      background-color: #0284c7;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: bold;
+    }
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+    .floating-whatsapp img {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Client-Centric IT Solutions</h1>
+    <p>Reliable IT Services for Growing Businesses</p>
+  </header>
 
-      header {
-        background: #0066cc;
-        color: white;
-        padding: 2rem;
-        text-align: center;
-      }
-
-      nav {
-        background: #005bb5;
-        padding: 1rem;
-        text-align: center;
-      }
-
-      nav a {
-        color: white;
-        margin: 0 1rem;
-        text-decoration: none;
-      }
-
-      section {
-        padding: 2rem;
-      }
-
-      .service-card {
-        background: white;
-        padding: 1rem;
-        margin: 1rem 0;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s;
-        cursor: pointer;
-      }
-
-      .service-card:hover {
-        transform: scale(1.02);
-      }
-
-      .form-group {
-        margin-bottom: 1rem;
-      }
-
-      .form-group input, .form-group textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-      }
-
-      .form-group button {
-        padding: 0.75rem 1.5rem;
-        background: #0066cc;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      .form-group button:hover {
-        background: #004d99;
-      }
-
-      .floating-whatsapp {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-      }
-
-      .floating-whatsapp img {
-        width: 60px;
-        height: 60px;
-      }
-
-      iframe {
-        width: 100%;
-        height: 700px;
-        border: none;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Client-Centric IT Solutions</h1>
-      <p>Your trusted partner for on-demand and remote IT support</p>
-    </header>
-
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#book">Book</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="services">
-      <h2>Our Services</h2>
-      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/8wM4jR4tbbrldqkcMO'">
-        <h3>IT Consultation – R450/hr</h3>
-        <p>Get expert advice on your IT infrastructure and planning.</p>
+  <section>
+    <h2 style="text-align: center;">Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Remote Support - R400</h3>
+        <p>Quick help via remote access tools to resolve technical issues.</p>
+        <strong>R200 deposit required</strong><br>
+        <a href="#">Book & Pay</a>
       </div>
-      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/fZeeV39nhbrr9Ak3ce'">
-        <h3>Remote Support – R250/hr</h3>
-        <p>Quick remote assistance to resolve your issues on the go.</p>
+      <div class="service-card">
+        <h3>Cloud Migration - R1200</h3>
+        <p>Move your systems and email to the cloud seamlessly and securely.</p>
+        <strong>R600 deposit required</strong><br>
+        <a href="#">Book & Pay</a>
       </div>
-      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/5kAdTi1Q97dd0gAeVf'">
-        <h3>On-site Troubleshooting – R700/call-out</h3>
-        <p>Professional diagnosis and resolution of issues at your premises.</p>
+      <div class="service-card">
+        <h3>Network Audit - R850</h3>
+        <p>Full review and documentation of your network and IT assets.</p>
+        <strong>R425 deposit required</strong><br>
+        <a href="#">Book & Pay</a>
       </div>
-      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/14k7vI4tb8rreHC7sx'">
-        <h3>Network Setup – R950</h3>
-        <p>Full home/office network design and setup with performance tuning.</p>
+      <div class="service-card">
+        <h3>Hardware Install - R600</h3>
+        <p>Printer, router, switch, or workstation setup and configuration.</p>
+        <strong>R300 deposit required</strong><br>
+        <a href="#">Book & Pay</a>
       </div>
-      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/28o9DP0b53dd9AkcMP'">
-        <h3>Device Management – R400/device</h3>
-        <p>Configuration, updates, monitoring & management of user devices.</p>
+      <div class="service-card">
+        <h3>Data Backup Setup - R500</h3>
+        <p>Protect your data with a secure and automated backup system.</p>
+        <strong>R250 deposit required</strong><br>
+        <a href="#">Book & Pay</a>
       </div>
-      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/6oEaFc5b5aXxgqY7sA'">
-        <h3>Email Security Solutions – R500/domain</h3>
-        <p>Spam filtering, phishing protection, and secure delivery optimization.</p>
+      <div class="service-card">
+        <h3>Email Domain Setup - R700</h3>
+        <p>Get your business emails up and running with a professional domain.</p>
+        <strong>R350 deposit required</strong><br>
+        <a href="#">Book & Pay</a>
       </div>
-      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/4gw4jR8rX35fcGY7sK'">
-        <h3>Printer & Peripheral Setup – R300</h3>
-        <p>Setup and troubleshooting of printers, scanners, and accessories.</p>
-      </div>
-    </section>
-
-    <section id="book">
-      <h2>Schedule a Booking</h2>
-      <iframe src="https://calendly.com/clientcentricitsolutions/30min?month_view=true"></iframe>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <form action="mailto:clientcentricitsolutions@qualityservice.com" method="POST" enctype="text/plain">
-        <div class="form-group">
-          <label for="email">Your Email (required):</label>
-          <input type="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message (required):</label>
-          <textarea name="message" rows="6" required></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit">Send Message</button>
-        </div>
-      </form>
-    </section>
-
-    <div class="floating-whatsapp">
-      <a href="https://wa.me/27603640096" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
     </div>
-  </body>
+  </section>
+
+  <section style="text-align:center; margin-top: 3rem;">
+    <h2>Schedule a Consultation</h2>
+    <iframe src="https://calendly.com/YOUR-CALENDLY-USERNAME" width="100%" height="800" frameborder="0"></iframe>
+  </section>
+
+  <section style="text-align:center; margin-top: 3rem;">
+    <h2>Contact Us</h2>
+    <form action="mailto:clientcentricitsolutions@qualityservice.com" method="POST" enctype="text/plain" style="max-width: 600px; margin: auto;">
+      <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding: 10px; margin-bottom: 10px;" />
+      <textarea name="message" placeholder="Your Message" required style="width:100%; padding: 10px; height: 120px;"></textarea>
+      <br>
+      <button type="submit" style="padding: 10px 20px; margin-top: 10px; background-color: #0284c7; color: white; border: none; border-radius: 4px;">Send Message</button>
+    </form>
+  </section>
+
+  <div class="floating-whatsapp">
+    <a href="https://wa.me/27603640096" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp"/>
+    </a>
+  </div>
+</body>
 </html>
