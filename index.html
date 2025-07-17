@@ -1,188 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Client-Centric IT Solutions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #0d47a1;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    nav {
-      background: #1565c0;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(to right, #2196f3, #64b5f6);
-      color: white;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-    .section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .service {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      transition: 0.3s;
-      cursor: pointer;
-      text-align: center;
-    }
-    .service:hover {
-      transform: translateY(-5px);
-      background: #e3f2fd;
-    }
-    .service a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .contact-form {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    footer {
-      background: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      margin-top: 2rem;
-    }
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-    }
-    .floating-whatsapp img {
-      width: 60px;
-      height: 60px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client-Centric IT Solutions</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f4f4f9;
+        color: #333;
+      }
 
-  <header>
-    <h1>Client-Centric IT Solutions</h1>
-    <p>Your trusted remote IT partner for modern businesses</p>
-  </header>
+      header {
+        background: #0066cc;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#booking">Book</a>
-    <a href="#contact">Contact</a>
-  </nav>
+      nav {
+        background: #005bb5;
+        padding: 1rem;
+        text-align: center;
+      }
 
-  <section class="hero">
-    <h1>Professional IT Support On-Demand</h1>
-    <p>Fast, flexible and affordable IT services for growing businesses.</p>
-  </section>
+      nav a {
+        color: white;
+        margin: 0 1rem;
+        text-decoration: none;
+      }
 
-  <section class="section" id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service">
-        <a href="https://paystack.com/pay/remote-support">
-          <h3>Remote Support - R400</h3>
-          <p>Quick help via remote access tools to resolve technical issues.</p>
-          <p><strong>R200 deposit required</strong></p>
-        </a>
+      section {
+        padding: 2rem;
+      }
+
+      .service-card {
+        background: white;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
+
+      .service-card:hover {
+        transform: scale(1.02);
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+
+      .form-group button {
+        padding: 0.75rem 1.5rem;
+        background: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .form-group button:hover {
+        background: #004d99;
+      }
+
+      .floating-whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+      }
+
+      .floating-whatsapp img {
+        width: 60px;
+        height: 60px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 700px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Client-Centric IT Solutions</h1>
+      <p>Your trusted partner for on-demand and remote IT support</p>
+    </header>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/8wM4jR4tbbrldqkcMO'">
+        <h3>IT Consultation – R450/hr</h3>
+        <p>Get expert advice on your IT infrastructure and planning.</p>
       </div>
-      <div class="service">
-        <a href="https://paystack.com/pay/cloud-migration">
-          <h3>Cloud Migration - R1200</h3>
-          <p>Move your systems and email to the cloud seamlessly and securely.</p>
-          <p><strong>R600 deposit required</strong></p>
-        </a>
+      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/fZeeV39nhbrr9Ak3ce'">
+        <h3>Remote Support – R250/hr</h3>
+        <p>Quick remote assistance to resolve your issues on the go.</p>
       </div>
-      <div class="service">
-        <a href="https://paystack.com/pay/network-audit">
-          <h3>Network Audit - R850</h3>
-          <p>Full review and documentation of your network and IT assets.</p>
-          <p><strong>R425 deposit required</strong></p>
-        </a>
+      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/5kAdTi1Q97dd0gAeVf'">
+        <h3>On-site Troubleshooting – R700/call-out</h3>
+        <p>Professional diagnosis and resolution of issues at your premises.</p>
       </div>
-      <div class="service">
-        <a href="https://paystack.com/pay/hardware-install">
-          <h3>Hardware Install - R600</h3>
-          <p>Printer, router, switch, or workstation setup and configuration.</p>
-          <p><strong>R300 deposit required</strong></p>
-        </a>
+      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/14k7vI4tb8rreHC7sx'">
+        <h3>Network Setup – R950</h3>
+        <p>Full home/office network design and setup with performance tuning.</p>
       </div>
-    </div>
-  </section>
+      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/28o9DP0b53dd9AkcMP'">
+        <h3>Device Management – R400/device</h3>
+        <p>Configuration, updates, monitoring & management of user devices.</p>
+      </div>
+      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/6oEaFc5b5aXxgqY7sA'">
+        <h3>Email Security Solutions – R500/domain</h3>
+        <p>Spam filtering, phishing protection, and secure delivery optimization.</p>
+      </div>
+      <div class="service-card" onclick="window.location.href='https://buy.stripe.com/4gw4jR8rX35fcGY7sK'">
+        <h3>Printer & Peripheral Setup – R300</h3>
+        <p>Setup and troubleshooting of printers, scanners, and accessories.</p>
+      </div>
+    </section>
 
-  <section class="section" id="booking">
-    <h2>Book a Session</h2>
-    <iframe src="https://calendly.com/" title="Booking Calendar"></iframe>
-  </section>
+    <section id="book">
+      <h2>Schedule a Booking</h2>
+      <iframe src="https://calendly.com/clientcentricitsolutions/30min?month_view=true"></iframe>
+    </section>
 
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-form">
+    <section id="contact">
+      <h2>Contact Us</h2>
       <form action="mailto:clientcentricitsolutions@qualityservice.com" method="POST" enctype="text/plain">
-        <label>Name:</label><br>
-        <input type="text" name="name" required style="width:100%; padding:8px;"><br><br>
-
-        <label>Email:</label><br>
-        <input type="email" name="email" required style="width:100%; padding:8px;"><br><br>
-
-        <label>Message:</label><br>
-        <textarea name="message" rows="5" required style="width:100%; padding:8px;"></textarea><br><br>
-
-        <button type="submit" style="padding:10px 20px; background:#0d47a1; color:white; border:none;">Send Message</button>
+        <div class="form-group">
+          <label for="email">Your Email (required):</label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message (required):</label>
+          <textarea name="message" rows="6" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Send Message</button>
+        </div>
       </form>
+    </section>
+
+    <div class="floating-whatsapp">
+      <a href="https://wa.me/27603640096" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+      </a>
     </div>
-
-    <h3>Our Location</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen></iframe>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Client-Centric IT Solutions. All rights reserved.</p>
-  </footer>
-
-  <div class="floating-whatsapp">
-    <a href="https://wa.me/27711234567" target="_blank">
-      <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp Chat">
-    </a>
-  </div>
-
-</body>
+  </body>
 </html>
