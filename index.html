@@ -1,224 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Client-Centric IT Solutions</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #f0f2f5;
-      color: #333;
-    }
-
-    header {
-      background: #3b82f6;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      background: #2563eb;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .services h2,
-    .reviews h2,
-    .contact h2 {
-      color: #1d4ed8;
-    }
-
-    .service {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .service a {
-      color: #1d4ed8;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .service a:hover {
-      text-decoration: underline;
-    }
-
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      animation: float 5s linear infinite;
-    }
-
-    @keyframes float {
-      0% { transform: translate(0, 0); }
-      25% { transform: translate(-10px, -10px); }
-      50% { transform: translate(-20px, 10px); }
-      75% { transform: translate(10px, -20px); }
-      100% { transform: translate(0, 0); }
-    }
-
-    .reviews .review {
-      background: #fff;
-      padding: 15px;
-      margin: 10px 0;
-      border-left: 5px solid #3b82f6;
-    }
-
-    .review-stars {
-      color: gold;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    button {
-      padding: 10px;
-      background: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #1d4ed8;
-    }
-
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <header>
-    <h1>Client-Centric IT Solutions</h1>
-    <p>Reliable. Professional. Affordable IT Services for Small Businesses</p>
+    <div class="logo">Client-Centric IT Solutions</div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Book</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#book">Book Now</a>
-  </nav>
+  <section class="hero">
+    <h1>Welcome to Client-Centric IT Solutions</h1>
+    <p>Your trusted partner for small business IT support.</p>
+    <a href="#services" class="btn">Explore Services</a>
+  </section>
 
-  <div class="container">
-    <section id="services" class="services">
-      <h2>Our Services</h2>
-
-      <div class="service">
-        <h3><a href="https://paystack.com/pay/service1">Onsite IT Support - R850</a></h3>
-        <p>Professional support at your premises to fix hardware, networking, or software issues.</p>
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="card-container">
+      <div class="card" onclick="goToPayment('Device Setup')">
+        <h3>Device Setup - R800</h3>
+        <p>Setup new devices for secure and optimal use.</p>
       </div>
-
-      <div class="service">
-        <h3><a href="https://paystack.com/pay/service2">Email Setup & Migration - R1,200</a></h3>
-        <p>Securely move your emails and configure your new email system with zero downtime.</p>
+      <div class="card" onclick="goToPayment('WiFi Troubleshooting')">
+        <h3>WiFi Troubleshooting - R600</h3>
+        <p>Resolve slow connections, drops, and signal issues.</p>
       </div>
-
-      <div class="service">
-        <h3><a href="https://paystack.com/pay/service3">Cloud Backup & Data Recovery - R1,500</a></h3>
-        <p>Protect your critical business data and recover lost files quickly and securely.</p>
+      <div class="card" onclick="goToPayment('Email Setup')">
+        <h3>Email Setup - R500</h3>
+        <p>Configure email for business or personal accounts.</p>
       </div>
-
-      <div class="service">
-        <h3><a href="https://paystack.com/pay/service4">Microsoft 365 Management - R950</a></h3>
-        <p>Setup, manage and secure your Microsoft accounts, licenses and user devices.</p>
+      <div class="card" onclick="goToPayment('Data Backup')">
+        <h3>Data Backup - R1000</h3>
+        <p>Securely back up your business-critical data.</p>
       </div>
-
-      <div class="service">
-        <h3><a href="https://paystack.com/pay/service5">Device Security & Remote Monitoring - R650</a></h3>
-        <p>Keep your systems safe and monitored 24/7 with modern endpoint protection.</p>
+      <div class="card" onclick="goToPayment('Cloud Migration')">
+        <h3>Cloud Migration - R1500</h3>
+        <p>Move to cloud platforms like Microsoft 365 securely.</p>
       </div>
-
-      <div class="service">
-        <h3><a href="https://paystack.com/pay/service6">Wi-Fi Setup & Troubleshooting - R500</a></h3>
-        <p>Optimize your home or business Wi-Fi for speed, coverage, and security.</p>
+      <div class="card" onclick="goToPayment('Security Audit')">
+        <h3>Security Audit - R1200</h3>
+        <p>Assess and secure your entire IT environment.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="book">
-      <h2>Secure Your Appointment</h2>
-      <p>Please complete a 50% deposit before selecting a time.</p>
-      <p><a href="https://paystack.com/pay/deposit">Click here to pay 50% deposit</a></p>
-      <iframe src="http://calendly.com/clientcentricitsolutions"></iframe>
-    </section>
+  <section id="booking" class="booking">
+    <h2>Secure Your Appointment</h2>
+    <p>After payment, book your preferred time below.</p>
+    <iframe src="http://calendly.com/clientcentricitsolutions" frameborder="0"></iframe>
+  </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <form action="mailto:clientcentricitsolutions@qualityservice.com" method="post" enctype="text/plain">
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+  <section id="reviews" class="reviews">
+    <h2>What Our Clients Say</h2>
+    <div class="review">
+      <p>"Excellent service, highly professional!"</p>
+      <span>- Palesa Lekoto ⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="review">
+      <p>"Quick response and solved my WiFi issue in minutes."</p>
+      <span>- Cindy Dhladhla ⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="review">
+      <p>"Very knowledgeable technician and affordable."</p>
+      <span>- Michael Dutoit ⭐⭐⭐⭐⭐</span>
+    </div>
+  </section>
 
-    <section id="reviews" class="reviews">
-      <h2>What Our Clients Say</h2>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-      <div class="review">
-        <p><strong>Palesa Lekoto</strong></p>
-        <p class="review-stars">★★★★★</p>
-        <p>Exceptional service and knowledgeable team. Highly recommended!</p>
-      </div>
-
-      <div class="review">
-        <p><strong>Cindy Dhladhla</strong></p>
-        <p class="review-stars">★★★★★</p>
-        <p>Prompt response and professional advice. Solved my issue in one visit.</p>
-      </div>
-
-      <div class="review">
-        <p><strong>Michael Dutoit</strong></p>
-        <p class="review-stars">★★★★★</p>
-        <p>Impressive turnaround and trustworthy recommendations. Will use again.</p>
-      </div>
-    </section>
+  <div id="whatsapp-btn">
+    <a href="https://wa.me/27603640096" target="_blank">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+    </a>
   </div>
 
-  <a href="https://wa.me/27603640096" class="floating-whatsapp">
-    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" width="60" height="60">
-  </a>
+  <script src="script.js"></script>
 </body>
-
 </html>
