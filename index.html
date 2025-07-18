@@ -2,96 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Client-Centric IT Solutions</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <div class="logo">Client-Centric IT Solutions</div>
+    <h1>Client-Centric IT Solutions</h1>
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
-        <li><a href="#booking">Book</a></li>
+        <li><a href="#appointment">Appointments</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Welcome to Client-Centric IT Solutions</h1>
-    <p>Your trusted partner for small business IT support.</p>
-    <a href="#services" class="btn">Explore Services</a>
+  <section id="hero">
+    <h2>Your Partner in Professional IT Support</h2>
+    <p>Reliable, Responsive, and Client-Focused.</p>
   </section>
 
-  <section id="services" class="services">
+  <section id="services">
     <h2>Our Services</h2>
-    <div class="card-container">
-      <div class="card" onclick="goToPayment('Device Setup')">
-        <h3>Device Setup - R800</h3>
-        <p>Setup new devices for secure and optimal use.</p>
+    <div class="cards">
+      <div class="card" onclick="goToPayment('Laptop Support')">
+        <h3>Laptop Support</h3>
+        <p>From R500 — Hardware and Software support for laptops</p>
       </div>
-      <div class="card" onclick="goToPayment('WiFi Troubleshooting')">
-        <h3>WiFi Troubleshooting - R600</h3>
-        <p>Resolve slow connections, drops, and signal issues.</p>
+      <div class="card" onclick="goToPayment('WiFi Setup')">
+        <h3>WiFi Setup</h3>
+        <p>From R450 — Installation and optimization of wireless networks</p>
+      </div>
+      <div class="card" onclick="goToPayment('Cloud Backup')">
+        <h3>Cloud Backup</h3>
+        <p>From R600 — Secure backup and recovery solutions</p>
       </div>
       <div class="card" onclick="goToPayment('Email Setup')">
-        <h3>Email Setup - R500</h3>
-        <p>Configure email for business or personal accounts.</p>
+        <h3>Email Setup</h3>
+        <p>From R350 — Business & personal email configuration</p>
       </div>
-      <div class="card" onclick="goToPayment('Data Backup')">
-        <h3>Data Backup - R1000</h3>
-        <p>Securely back up your business-critical data.</p>
+      <div class="card" onclick="goToPayment('Hardware Installations')">
+        <h3>Hardware Installations</h3>
+        <p>From R750 — Printers, Routers, and More</p>
       </div>
-      <div class="card" onclick="goToPayment('Cloud Migration')">
-        <h3>Cloud Migration - R1500</h3>
-        <p>Move to cloud platforms like Microsoft 365 securely.</p>
-      </div>
-      <div class="card" onclick="goToPayment('Security Audit')">
-        <h3>Security Audit - R1200</h3>
-        <p>Assess and secure your entire IT environment.</p>
+      <div class="card" onclick="goToPayment('Security Configuration')">
+        <h3>Security Configuration</h3>
+        <p>From R700 — Protect your digital assets effectively</p>
       </div>
     </div>
   </section>
 
-  <section id="booking" class="booking">
-    <h2>Secure Your Appointment</h2>
-    <p>After payment, book your preferred time below.</p>
-    <iframe src="http://calendly.com/clientcentricitsolutions" frameborder="0"></iframe>
+  <section id="appointment">
+    <h2>Book Your Appointment</h2>
+    <p>First secure payment, then choose a suitable time below:</p>
+    <div class="calendar-wrapper">
+      <iframe src="https://calendly.com/clientcentricitsolutions?embed_domain=vercel.app" frameborder="0" width="100%" height="700"></iframe>
+    </div>
   </section>
 
-  <section id="reviews" class="reviews">
+  <section id="reviews">
     <h2>What Our Clients Say</h2>
-    <div class="review">
-      <p>"Excellent service, highly professional!"</p>
-      <span>- Palesa Lekoto ⭐⭐⭐⭐⭐</span>
+    <div class="review-box">
+      <div class="review">
+        <p>"Exceptional service and great turnaround time!"</p>
+        <strong>– Palesa Lekoto ⭐⭐⭐⭐⭐</strong>
+      </div>
+      <div class="review">
+        <p>"Very professional and affordable IT support."</p>
+        <strong>– Cindy Dhladhla ⭐⭐⭐⭐⭐</strong>
+      </div>
+      <div class="review">
+        <p>"Always my go-to for anything tech-related."</p>
+        <strong>– Michael Dutoit ⭐⭐⭐⭐</strong>
+      </div>
     </div>
-    <div class="review">
-      <p>"Quick response and solved my WiFi issue in minutes."</p>
-      <span>- Cindy Dhladhla ⭐⭐⭐⭐⭐</span>
-    </div>
-    <div class="review">
-      <p>"Very knowledgeable technician and affordable."</p>
-      <span>- Michael Dutoit ⭐⭐⭐⭐⭐</span>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <div id="whatsapp-btn">
-    <a href="https://wa.me/27603640096" target="_blank">
-      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
-    </a>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  </secti
