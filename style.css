@@ -1,112 +1,119 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f2f5;
+  background-color: #f4f4f9;
   color: #333;
+  line-height: 1.6;
 }
 header {
-  background: #1f2c4c;
+  background: #333;
   color: white;
   padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo {
-  font-size: 1.5em;
-  font-weight: bold;
+  text-align: center;
 }
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+  margin-top: 10px;
 }
-nav ul li a {
-  color: white;
+nav a {
+  color: #00d084;
   text-decoration: none;
   font-weight: bold;
 }
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(to right, #2d3e60, #4a6ea8);
+#hero {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
   color: white;
-}
-.hero .btn {
-  background: #ff9900;
-  padding: 12px 24px;
-  border-radius: 5px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-}
-.services {
   padding: 60px 20px;
   text-align: center;
 }
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 .card {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ddd;
 }
 .card:hover {
-  transform: scale(1.05);
-  background: #eef;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.booking iframe {
-  width: 100%;
-  height: 600px;
-  border-radius: 8px;
-  margin-top: 20px;
+section h2 {
+  padding: 20px;
+  text-align: center;
 }
-.reviews {
-  padding: 40px 20px;
-  background: #fff;
+.calendar-wrapper {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.review-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 .review {
-  margin: 20px auto;
-  max-width: 600px;
-  background: #eee;
-  padding: 20px;
-  border-radius: 8px;
+  background: #e2f7f5;
+  padding: 15px;
+  border-radius: 10px;
+  width: 70%;
+  margin-bottom: 15px;
 }
-.contact form {
+form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
-  margin: auto;
 }
-.contact input, .contact textarea {
-  padding: 12px;
-  border: 1px solid #aaa;
+input, textarea {
+  padding: 10px;
   border-radius: 5px;
+  border: 1px solid #ccc;
 }
-.contact button {
-  background: #007bff;
+button {
+  background: #0072ff;
   color: white;
   padding: 12px;
   border: none;
   border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
 }
-#whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  animation: rotate 8s linear infinite;
+button:hover {
+  background: #005cd4;
 }
-@keyframes rotate {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
+#whatsapp-btn {
+  width: 60px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  animation: bounce 3s infinite ease-in-out alternate;
+}
+@keyframes bounce {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-10px) rotate(360deg); }
+}
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
