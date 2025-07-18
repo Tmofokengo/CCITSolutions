@@ -4,121 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Client-Centric IT Solutions</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo" class="logo" />
+    <img src="logo.png" alt="Client-Centric Logo" class="logo" />
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#appointment">Appointments</a></li>
+        <li><a href="#appointment">Appointment</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="home" class="hero" data-aos="fade-down">
-    <h1>Welcome to Client-Centric IT Solutions</h1>
-    <p>Your one-stop shop for professional IT support and services.</p>
+  <section class="hero">
+    <h1>Client-Centric IT Solutions</h1>
+    <p>Your trusted partner for modern IT support.</p>
   </section>
 
-  <section id="services" data-aos="fade-up">
+  <section id="services" class="services">
     <h2>Our Services</h2>
-    <div class="services-container">
-      <div class="service" onclick="redirectToPayment('Onsite Support')">
-        <h3>Onsite Support</h3>
-        <p>Quick and reliable technical support at your premises.</p>
-        <span>R800</span>
-      </div>
-      <div class="service" onclick="redirectToPayment('Email Migrations')">
-        <h3>Email Migrations</h3>
-        <p>Seamlessly move your emails to a secure cloud platform.</p>
-        <span>R1,200</span>
-      </div>
-      <div class="service" onclick="redirectToPayment('Network Setup')">
+    <div class="service-grid">
+      <div class="service" onclick="goToPayment('Network Setup')">
         <h3>Network Setup</h3>
-        <p>Office Wi-Fi and LAN setup tailored to your needs.</p>
-        <span>R1,000</span>
+        <p>From R1,000 – Structured cabling and router setup.</p>
       </div>
-      <div class="service" onclick="redirectToPayment('Device Troubleshooting')">
-        <h3>Device Troubleshooting</h3>
-        <p>We fix and optimize slow or non-working devices.</p>
-        <span>R600</span>
+      <div class="service" onclick="goToPayment('Email Migration')">
+        <h3>Email Migration</h3>
+        <p>From R1,500 – Migrate your business email to Microsoft 365.</p>
       </div>
-      <div class="service" onclick="redirectToPayment('IT Consultation')">
-        <h3>IT Consultation</h3>
-        <p>Strategic guidance for all your technology needs.</p>
-        <span>R1,500</span>
+      <div class="service" onclick="goToPayment('Device Security')">
+        <h3>Device Security</h3>
+        <p>From R750 – Protect laptops, desktops & mobile devices.</p>
       </div>
-      <div class="service" onclick="redirectToPayment('Remote Assistance')">
-        <h3>Remote Assistance</h3>
-        <p>Support wherever you are — we connect remotely.</p>
-        <span>R400</span>
+      <div class="service" onclick="goToPayment('Cloud Backup')">
+        <h3>Cloud Backup</h3>
+        <p>From R800 – Secure cloud data storage and recovery.</p>
+      </div>
+      <div class="service" onclick="goToPayment('Remote IT Support')">
+        <h3>Remote IT Support</h3>
+        <p>From R500 – Get expert help from anywhere.</p>
+      </div>
+      <div class="service" onclick="goToPayment('Hardware Setup')">
+        <h3>Hardware Setup</h3>
+        <p>From R600 – Install and configure desktops, printers, etc.</p>
       </div>
     </div>
   </section>
 
-  <section id="appointment" data-aos="zoom-in">
-    <h2>Secure Your Appointment</h2>
-    <p class="center-note">
-      Please make a secure payment of 50% to proceed.<br/>
-      <strong>No appointments will be attended to before payment is made.</strong>
-    </p>
+  <section id="appointment" class="appointment">
+    <h2>Secure Your Spot</h2>
+    <p class="centered-text"><strong>First secure payment, then choose a suitable time below.<br>No appointment will be attended to before payment is made.</strong></p>
     <div class="calendar-container">
-      <iframe src="https://calendly.com/clientcentricitsolutions" frameborder="0" id="calendlyFrame"></iframe>
+      <iframe src="https://calendly.com/clientcentricitsolutions" width="100%" height="600" frameborder="0"></iframe>
     </div>
   </section>
 
-  <section id="reviews" data-aos="fade-up">
-    <h2>Client Reviews</h2>
-    <div class="reviews">
+  <section id="reviews" class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-grid">
       <div class="review">
-        <p>"Excellent service and always on time!"</p>
-        <strong>Palesa Lekoto</strong>
-        <span>★★★★★</span>
+        <p>"Fantastic service and fast response!"</p>
+        <strong>– Palesa Lekoto ⭐⭐⭐⭐⭐</strong>
       </div>
       <div class="review">
-        <p>"My network setup is now flawless. Highly recommended!"</p>
-        <strong>Cindy Dhladhla</strong>
-        <span>★★★★☆</span>
+        <p>"Great support but pricing a bit steep."</p>
+        <strong>– Cindy Dhladhla ⭐⭐⭐⭐</strong>
       </div>
       <div class="review">
-        <p>"Good value and very helpful support!"</p>
-        <strong>Michael Dutoit</strong>
-        <span>★★★★☆</span>
+        <p>"Solved our network issues in minutes."</p>
+        <strong>– Michael Dutoit ⭐⭐⭐⭐⭐</strong>
       </div>
       <div class="review">
-        <p>"Got help the same day I called. Great work!"</p>
-        <strong>Thabo Mokgopa</strong>
-        <span>★★★★★</span>
+        <p>"Good remote service. Very responsive."</p>
+        <strong>– Banele Mokoena ⭐⭐⭐⭐</strong>
       </div>
       <div class="review">
-        <p>"Very professional and friendly!"</p>
-        <strong>Lebo Ndlovu</strong>
-        <span>★★★★★</span>
+        <p>"Best IT team we’ve worked with!"</p>
+        <strong>– Thando Zungu ⭐⭐⭐⭐⭐</strong>
+      </div>
+      <div class="review">
+        <p>"Helpful and friendly technicians."</p>
+        <strong>– Lerato Mkhize ⭐⭐⭐⭐</strong>
       </div>
     </div>
   </section>
 
-  <section id="contact" data-aos="fade-right">
+  <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <form id="contactForm" action="mailto:clientcentricitsolutions@qualityservice.com" method="post" enctype="text/plain">
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
+    <form onsubmit="sendEmail(event)">
+      <input type="text" id="name" placeholder="Name and Surname" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp" onclick="openWhatsApp()" />
+  <img src="whatsapp.png" alt="WhatsApp" id="whatsapp-btn" onclick="openWhatsApp()" />
 
-  <script src="script.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
