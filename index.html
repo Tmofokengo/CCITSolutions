@@ -5,32 +5,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Client-Centric IT Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
       margin: 0;
-      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f0f2f5;
       color: #333;
     }
 
     header {
-      background-color: #005792;
+      background: #3b82f6;
       color: white;
       padding: 20px;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
+      gap: 30px;
+      background: #2563eb;
+      padding: 10px;
     }
 
     nav a {
@@ -43,108 +39,92 @@
       text-decoration: underline;
     }
 
-    .section {
-      padding: 50px 20px;
-      max-width: 1100px;
+    .container {
+      padding: 30px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    .hero {
-      background: #0078d4;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .services h2,
+    .reviews h2,
+    .contact h2 {
+      color: #1d4ed8;
     }
 
     .service {
       background: white;
-      border-radius: 10px;
       padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .service:hover {
-      transform: scale(1.03);
-    }
-
-    .service h3 {
-      color: #0078d4;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     }
 
     .service a {
-      display: block;
-      margin-top: 15px;
-      padding: 10px;
-      background-color: #005792;
-      color: white;
+      color: #1d4ed8;
+      font-weight: bold;
       text-decoration: none;
-      border-radius: 5px;
     }
 
     .service a:hover {
-      background-color: #004370;
+      text-decoration: underline;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(-10px, -10px); }
+      50% { transform: translate(-20px, 10px); }
+      75% { transform: translate(10px, -20px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    .reviews .review {
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .review-stars {
+      color: gold;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: auto;
+      gap: 10px;
     }
 
-    form input,
-    form textarea {
+    input, textarea {
       padding: 10px;
-      border-radius: 5px;
       border: 1px solid #ccc;
+      border-radius: 5px;
     }
 
-    form button {
+    button {
       padding: 10px;
-      background: #0078d4;
+      background: #2563eb;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
     }
 
-    footer {
-      background-color: #003d5b;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    button:hover {
+      background: #1d4ed8;
     }
 
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-
-    .whatsapp-btn img {
-      width: 60px;
-      height: 60px;
-    }
-
-    .calendar iframe {
+    iframe {
       width: 100%;
       height: 600px;
       border: none;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -152,78 +132,93 @@
 <body>
   <header>
     <h1>Client-Centric IT Solutions</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#calendar">Book</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Reliable. Professional. Affordable IT Services for Small Businesses</p>
   </header>
 
-  <div class="hero">
-    <h1>Making IT Work for You</h1>
-    <p>Reliable, affordable, and client-focused IT services for small businesses and individuals.</p>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#book">Book Now</a>
+  </nav>
+
+  <div class="container">
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+
+      <div class="service">
+        <h3><a href="https://paystack.com/pay/service1">Onsite IT Support - R850</a></h3>
+        <p>Professional support at your premises to fix hardware, networking, or software issues.</p>
+      </div>
+
+      <div class="service">
+        <h3><a href="https://paystack.com/pay/service2">Email Setup & Migration - R1,200</a></h3>
+        <p>Securely move your emails and configure your new email system with zero downtime.</p>
+      </div>
+
+      <div class="service">
+        <h3><a href="https://paystack.com/pay/service3">Cloud Backup & Data Recovery - R1,500</a></h3>
+        <p>Protect your critical business data and recover lost files quickly and securely.</p>
+      </div>
+
+      <div class="service">
+        <h3><a href="https://paystack.com/pay/service4">Microsoft 365 Management - R950</a></h3>
+        <p>Setup, manage and secure your Microsoft accounts, licenses and user devices.</p>
+      </div>
+
+      <div class="service">
+        <h3><a href="https://paystack.com/pay/service5">Device Security & Remote Monitoring - R650</a></h3>
+        <p>Keep your systems safe and monitored 24/7 with modern endpoint protection.</p>
+      </div>
+
+      <div class="service">
+        <h3><a href="https://paystack.com/pay/service6">Wi-Fi Setup & Troubleshooting - R500</a></h3>
+        <p>Optimize your home or business Wi-Fi for speed, coverage, and security.</p>
+      </div>
+    </section>
+
+    <section id="book">
+      <h2>Secure Your Appointment</h2>
+      <p>Please complete a 50% deposit before selecting a time.</p>
+      <p><a href="https://paystack.com/pay/deposit">Click here to pay 50% deposit</a></p>
+      <iframe src="http://calendly.com/clientcentricitsolutions"></iframe>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form action="mailto:clientcentricitsolutions@qualityservice.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section id="reviews" class="reviews">
+      <h2>What Our Clients Say</h2>
+
+      <div class="review">
+        <p><strong>Palesa Lekoto</strong></p>
+        <p class="review-stars">★★★★★</p>
+        <p>Exceptional service and knowledgeable team. Highly recommended!</p>
+      </div>
+
+      <div class="review">
+        <p><strong>Cindy Dhladhla</strong></p>
+        <p class="review-stars">★★★★★</p>
+        <p>Prompt response and professional advice. Solved my issue in one visit.</p>
+      </div>
+
+      <div class="review">
+        <p><strong>Michael Dutoit</strong></p>
+        <p class="review-stars">★★★★★</p>
+        <p>Impressive turnaround and trustworthy recommendations. Will use again.</p>
+      </div>
+    </section>
   </div>
 
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Network Setup</h3>
-        <p>We design, install and configure reliable network systems.</p>
-        <a href="https://buy.stripe.com/8wM7tS3n2cdH26A5kl">Pay 50% & Book</a>
-      </div>
-      <div class="service">
-        <h3>Device Troubleshooting</h3>
-        <p>On-demand repairs and tech support for computers and printers.</p>
-        <a href="https://buy.stripe.com/7sI8zW3n29FddnK9AD">Pay 50% & Book</a>
-      </div>
-      <div class="service">
-        <h3>Email Setup</h3>
-        <p>Professional email accounts for your business with security in mind.</p>
-        <a href="https://buy.stripe.com/fZe16W9gAfVZ7Fe28g">Pay 50% & Book</a>
-      </div>
-      <div class="service">
-        <h3>Cloud Backup</h3>
-        <p>Keep your data safe with secure cloud-based storage solutions.</p>
-        <a href="https://buy.stripe.com/bIY4jqfOg34Xb5KaEG">Pay 50% & Book</a>
-      </div>
-      <div class="service">
-        <h3>Remote IT Support</h3>
-        <p>Tech help from anywhere — fast and professional support online.</p>
-        <a href="https://buy.stripe.com/3cs3cY1hwcZT26AcMY">Pay 50% & Book</a>
-      </div>
-      <div class="service">
-        <h3>Microsoft 365 Management</h3>
-        <p>License setup, onboarding, Teams, OneDrive, SharePoint support.</p>
-        <a href="https://buy.stripe.com/aEU5nKfOg3UX1rS3ce">Pay 50% & Book</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="calendar" class="section calendar">
-    <h2>Schedule an Appointment</h2>
-    <p>Secure your booking after payment:</p>
-    <iframe src="https://calendly.com/clientcentricitsolutions/consultation?month=2025-07"></iframe>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form action="mailto:clientcentricitsolutions@qualityservice.com" method="post" enctype="text/plain">
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <div class="whatsapp-btn">
-    <a href="https://wa.me/27603640096" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
-    </a>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Client-Centric IT Solutions. All rights reserved.</p>
-  </footer>
+  <a href="https://wa.me/27603640096" class="floating-whatsapp">
+    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" width="60" height="60">
+  </a>
 </body>
 
 </html>
